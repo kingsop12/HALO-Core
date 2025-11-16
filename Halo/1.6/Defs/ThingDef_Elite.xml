@@ -1,0 +1,142 @@
+<Defs>
+  
+  <!--The BS_Alt entry is important for HAR compatibility. It will swap the ThingDef for HAR's custom thing so HAR doesn't print a giant red error.-->
+  <ThingDef ParentName="Human" BS_Alt="ThingDef_AlienRace"> 
+    <defName>Cov_Elite</defName>
+    <label>Sangheili</label>
+    <description>test</description>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <MoveSpeed>6</MoveSpeed>
+      <ComfyTemperatureMin>7</ComfyTemperatureMin>
+      <ComfyTemperatureMax>25</ComfyTemperatureMax>
+      <Flammability>1</Flammability>
+      <Fertility MayRequire="Ludeon.Rimworld.Biotech">1</Fertility>
+      <GlobalLearningFactor>1</GlobalLearningFactor>
+      <MaxNutrition>0.8</MaxNutrition>
+      <CarryingCapacity>150</CarryingCapacity>
+      <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">150</VEF_MassCarryCapacity>
+      <SM_BodySizeMultiplier>1.3</SM_BodySizeMultiplier>
+    </statBases>
+    <tools Inherit="False">
+        <label>left hand</label>
+        <labelNoLocation>hand</labelNoLocation>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>1.2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>5</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right hand</label>
+        <labelNoLocation>hand</labelNoLocation>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>1.2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>5</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <!-- These can be changed if you want custom thinktrees. -->
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      
+      <!-- Out custom body. VERY IMPORTANT! :) -->
+      <body>Cov_EliteBody</body>
+
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>112</lifeExpectancy>
+      <nameCategory>HumanStandard</nameCategory>
+
+      <!-- I'd suggest to use SM_BodySizeMultiplier or the Cosmetic version instead of changing size here. -->
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>1</baseHealthScale>
+      
+      <!-- They are sadly very hungry. -->
+      <baseHungerRate>1.0</baseHungerRate> 
+
+      <gestationPeriodDays>30</gestationPeriodDays>
+      
+      <canBecomeShambler>true</canBecomeShambler>
+      
+      <!-- <useMeatFrom IsNull="True"/>
+      <hasMeat>true</hasMeat>
+      <leatherDef IsNull="False"/>
+      <bloodSmearDef IsNull="True"/>
+      <bloodDef>Filth_MachineBits</bloodDef> -->
+
+      <!-- You can set your own hediffGivers if you don't want to let Rimworld grant the standard human hediffs. -->
+      <!-- <hediffGiverSets Inherit="False"/> -->
+      
+      <lifeStageAges Inherit="False">
+        <!-- We're not using custom defs because some Rimworld stuff is hardcoded to look for certain defs.
+         Better from a compatibility standpoint to simply make the stages exist but not be active if you must. -->
+         <!-- You can use aging rate modifiers and setting for making children be born at a higher age.-->
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>3</minAge>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>HumanlikePreTeenager</def>
+          <minAge>9</minAge>
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>13</minAge>
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+        </li>
+      </lifeStageAges>
+      <ageGenerationCurve>
+        <points>
+          <li>(20,0)</li>
+          <li>(21,100)</li>
+          <li>(90,100)</li>
+          <li>(300,0)</li>
+        </points>
+      </ageGenerationCurve>
+    </race>
+    <modExtensions>
+      <!-- Required to get the Hediff/tracker added. -->
+      <li Class="BigAndSmall.RaceExtension">
+        <raceHediff>Cov_EliteTracker</raceHediff>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

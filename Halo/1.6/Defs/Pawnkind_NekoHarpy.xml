@@ -1,0 +1,127 @@
+<Defs>
+
+    <!-- This is an example pawnkind. It is large part  a copy of Ludeon's Ancient Soldier, with the race set to Neko Harpy-->
+    <PawnKindDef>
+    <defName>SRM_SoldierNekoHarpy</defName>
+    <label>ancient neko-harpy</label>
+    <race>SRM_NekoHarpy</race> <!-- Forces the race-->
+    <combatPower>100</combatPower> <!-- Higher combat power because Neko Harpies are stronk!-->
+    <defaultFactionDef>AncientsHostile</defaultFactionDef>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <chemicalAddictionChance>0.25</chemicalAddictionChance> <!--Far too often addicted to something. How annoying!-->
+    <apparelMoney>0~3800</apparelMoney>
+    <apparelTags>
+      <li>IndustrialMilitaryAdvanced</li>
+    </apparelTags>
+
+    <!--
+    You can force particular armor items, but keep in mind that they can't overlap.
+     
+    If you want "If this mod, then that"... type logic you'll need to use either xPatches or loadfolders.
+    -->
+    <apparelRequired Inherit="False">
+      <li MayRequire="RedMattis.BigSmall">BS_BarbarianArmor</li>
+    </apparelRequired>
+
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+
+    <!--
+    You can only set a range, so ideally you'll want to create different pawnkinds for different "levels" of soldiers rather than
+     the huge variance you see here.
+     -->
+    <weaponMoney>300~2300</weaponMoney>
+    <weaponTags>
+      <li>MedievalMeleeDecent</li>
+      <li>MedievalMeleeAdvanced</li>
+      <li>LongSword</li>
+      <li>UltratechMelee</li>
+      <li>DankPyon_Greatsword</li>
+      <li>DankPyon_NamedGreataxe</li>
+    </weaponTags>
+    <techHediffsMoney>100~6000</techHediffsMoney>
+
+    <!-- Tags don't need may-require, so you can safely add tags from mods and DLC without worrying about if the mod or DLC is actually active -->
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>AdvancedWeapon</li>
+      <li>ImplantEmpireCommon</li>
+      <li>BodyPartsArchotech</li>
+    </techHediffsTags>
+    <techHediffsChance>0.40</techHediffsChance>
+    <combatEnhancingDrugsChance>0.5</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>1~5</combatEnhancingDrugsCount>
+    <!--Usually biocoded! No stealing neko-harpy gear!
+    
+    Using biocoded  items is often a good idea for balancing high-tech factions which the player can encounter at day one as it prevents the  players
+    from instantly becoming a high-tech faction just by defeating a few high-tech pawns.
+    The Empire from Royalty uses the DeathAcidifier a lot but is fairly generous with rare biocoding of weapons, but since they aren't hostile early-game,
+    it is usually less of an issue.
+
+    -->
+    <biocodeWeaponChance>0.75</biocodeWeaponChance> 
+    <!--
+    biocodeApparelChance is also an alternative, but the death acidifier makes a bit more sense than biocoded pants, etc.
+
+    Death acidifiers can be circumvented by downing the pawn. 
+    -->
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+
+      <!-- Of course...-->
+      <li MayRequire="Ludeon.RimWorld.Royalty">AestheticShaper</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">AestheticNose</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">LoveEnhancer</li>
+    </techHediffsRequired>
+
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <initialWillRange>0</initialWillRange>
+    <initialResistanceRange>1~3</initialResistanceRange>
+
+    <!--
+    The commented out tag here is exceptionally useful for making "Elite" or "Boss" pawnkinds. Without it Ludeon's storyteller will tend to spawn
+    your boss pawns in hordes and completely ignore your foot soldiers.
+    
+    The limit is also suitable for any supporting role pawnkinds that hordes of would be weird. E.g. prevent randy random sending a raid of only medics.
+    -->
+    <!-- <maxPerGroup>3</maxPerGroup> -->
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <!--
+        If we have biotech, set the xenotype to our NekoHarpy xenotype.
+        Since that one forces the race already, the "race" entry it technically not needed if you know you'll have Biotech.
+         -->
+        <SRM_NekoHarpy MayRequire="Ludeon.RimWorld.Biotech">1.0</SRM_NekoHarpy>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnKindExtension">
+        <!-- RimwWorld Pawns have a Skill entry already, but it tends to cause validation errors, so I don't recommend using theirs. -->
+        <skillRange>
+          <li>
+            <skill>Melee</skill>
+            <range>4~18</range>
+          </li>
+        </skillRange>
+        <forcedPassions>
+          <li>
+            <skill>Melee</skill>
+            <passion>Major</passion>
+          </li>
+        </forcedPassions>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!--
+  In practice I'd advise forcing particular outfits, colors, etc. for your raiders. Vanilla's randomness does not make for a very coherent faction, and
+  will make your raiders look like the same hodgepodge of random stuff that vanilla and every other mod does.
+
+  For more proper examples of pawnkind designs for raiders with some coherence, etc. look at mods like Big & Small Races,
+  or the VIPER faction of Big & Small Lamia mod.
+   -->
+</Defs>

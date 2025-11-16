@@ -1,0 +1,61 @@
+<Defs>
+
+  <!-- Use this option if you don't want to give them genes, but want the xenotype to set their race. -->
+  <XenotypeDef Abstract="True" Name="SRM_NekoHarpyDirect">
+    <label>Neko-Harpy</label>
+    <description>A creature most known for committing horrible warcrimes as well as performing lewd and unusual acts such as eating without a table.</description>
+    <iconPath>Icons/BS_Kitsune</iconPath>
+    <combatPowerFactor>1</combatPowerFactor>
+    <inheritable>true</inheritable>
+    <factionlessGenerationWeight>1</factionlessGenerationWeight>
+    <genes>
+    </genes>
+    <modExtensions>
+      <!-- This makes the game toggle to your race when the pawn is spawned in as a new creature. It does not require any special genes to do so. -->
+      <li Class="BigAndSmall.XenotypeExtension">
+        <setRace>SRM_NekoHarpy</setRace>
+
+        <!-- If set to true it will also be able to force itself over other races, such as HAR races. -->
+        <forceRace>true</forceRace>
+      </li>
+    </modExtensions>
+  </XenotypeDef>
+
+  <!--
+  Use this option if you want Neko-Harpy-ism to be a gene that can be extracted or inherited, etc.
+  If unsure which one to use, I'd recommend using this one.
+  -->
+  <XenotypeDef Abstract="True" Name="SRM_NekoHarpyGeneBased">
+    <label>Neko-Harpy</label>
+    <description>A creature most known for committing horrible warcrimes as well as performing lewd and unusual acts such as eating without a table.</description>
+    <iconPath>Icons/BS_Kitsune</iconPath>
+    <combatPowerFactor>1</combatPowerFactor>
+    <inheritable>true</inheritable>
+    <factionlessGenerationWeight>1</factionlessGenerationWeight>
+    <genes>
+      <li>SRM_NekoHarpy</li>
+    </genes>
+  </XenotypeDef>
+
+  <!-- This is literally just SRM_NekoHarpyGeneBased, except we tell the game to actually create it by making a non-abstract version. :)-->
+  <XenotypeDef ParentName="SRM_NekoHarpyGeneBased">
+    <defName>SRM_NekoHarpy</defName>
+  </XenotypeDef>
+
+  <GeneDef ParentName="BS_BodySwitch">
+		<defName>SRM_NekoHarpy</defName>
+		<label>neko harpy race</label>
+		<description>Carriers of this genes are creatures most known for committing horrible warcrimes as well as performing lewd and unusual acts such as eating without a table.</description>
+		<biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+		<selectionWeight>0</selectionWeight>
+		<displayOrderInCategory>100</displayOrderInCategory>
+		<iconPath>Icons/BS_Kitsune</iconPath>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+				<thingDefSwap>SRM_NekoHarpy</thingDefSwap>
+        <forceThingDefSwap>false</forceThingDefSwap>
+			</li>
+		</modExtensions>
+	</GeneDef>
+</Defs>
