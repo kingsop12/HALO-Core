@@ -4,7 +4,7 @@
   <ThingDef ParentName="Human" BS_Alt="ThingDef_AlienRace"> 
     <defName>COV_Elite</defName>
     <label>Sangheili</label>
-    <description> test </description>
+    <description>The Sangheili are a species of strong, proud, and intelligent warriors, as well as skilled combat tacticians. Humanoid and reptilian in body structure, they sport quadruple hinged mandibles with conical teeth as well as a binary vascular system.</description>
     <statBases>
       <MarketValue>2000</MarketValue>
       <MoveSpeed>6</MoveSpeed>
@@ -86,4 +86,5 @@
       </ageGenerationCurve>
     </race>
   </ThingDef>
+
 </Defs>
