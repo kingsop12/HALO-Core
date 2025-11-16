@@ -2,9 +2,9 @@
   
   <!--The BS_Alt entry is important for HAR compatibility. It will swap the ThingDef for HAR's custom thing so HAR doesn't print a giant red error.-->
   <ThingDef ParentName="Human" BS_Alt="ThingDef_AlienRace"> 
-    <defName>Cov_Elite</defName>
+    <defName>COV_Elite</defName>
     <label>Sangheili</label>
-    <description>test</description>
+    <description> test </description>
     <statBases>
       <MarketValue>2000</MarketValue>
       <MoveSpeed>6</MoveSpeed>
@@ -18,54 +18,7 @@
       <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">150</VEF_MassCarryCapacity>
       <SM_BodySizeMultiplier>1.3</SM_BodySizeMultiplier>
     </statBases>
-    <tools Inherit="False">
-        <label>left hand</label>
-        <labelNoLocation>hand</labelNoLocation>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>1.2</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>5</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-      </li>
-      <li>
-        <label>right hand</label>
-        <labelNoLocation>hand</labelNoLocation>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>1.2</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>5</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
+
     <race>
       <!-- These can be changed if you want custom thinktrees. -->
       <thinkTreeMain>Humanlike</thinkTreeMain>
@@ -132,11 +85,5 @@
         </points>
       </ageGenerationCurve>
     </race>
-    <modExtensions>
-      <!-- Required to get the Hediff/tracker added. -->
-      <li Class="BigAndSmall.RaceExtension">
-        <raceHediff>Cov_EliteTracker</raceHediff>
-      </li>
-    </modExtensions>
   </ThingDef>
 </Defs>
