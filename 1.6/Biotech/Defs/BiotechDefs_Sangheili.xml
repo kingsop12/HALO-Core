@@ -1,0 +1,24 @@
+<Defs>
+
+  <!-- Use this option if you don't want to give them genes, but want the xenotype to set their race. -->
+  <XenotypeDef Abstract="True" Name="Cov_SangheiliDirect">
+    <label>Sangheili</label>
+    <description>The Sangheili are a species of strong, proud, and intelligent warriors.</description>
+    <iconPath>Icons/EliteHead_Gene</iconPath>
+    <combatPowerFactor>1</combatPowerFactor>
+    <inheritable>true</inheritable>
+    <factionlessGenerationWeight>1</factionlessGenerationWeight>
+    <genes>
+     <li>SangheiliVoice</li>
+    </genes>
+    <modExtensions>
+      <!-- This makes the game toggle to your race when the pawn is spawned in as a new creature. It does not require any special genes to do so. -->
+      <li Class="BigAndSmall.XenotypeExtension">
+        <setRace>COV_Sangheili</setRace>
+
+        <!-- If set to true it will also be able to force itself over other races, such as HAR races. -->
+        <forceRace>true</forceRace>
+      </li>
+    </modExtensions>
+  </XenotypeDef>
+</Defs>
