@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FurDef>
+    <defName>Cov_SangheiliB</defName>
+    <noGraphic>true</noGraphic>
+    <bodyTypeGraphicPaths>
+      <Male>Things/Pawn/Humanlike/Elite/Body/EliteBody_Male</Male>
+      <Female>Things/Pawn/Humanlike/Elite/Body/EliteBody_Female</Female>
+      <Thin>Things/Pawn/Humanlike/Elite/Body/EliteBody_Male</Thin>
+      <Hulk>Things/Pawn/Humanlike/Elite/Body/EliteBody_Male</Hulk>
+      <Child>Things/Pawn/Humanlike/Bodies/Naked_Child</Child>
+      <Baby>Things/Pawn/Humanlike/Bodies/Naked_Child</Baby><!-- Always covered by swaddled graphic -->
+    </bodyTypeGraphicPaths>
+  </FurDef>
+
+  <FurDef>
+    <defName>Cov_BruteB</defName>
+    <noGraphic>true</noGraphic>
+    <bodyTypeGraphicPaths>
+      <Male>Things/Pawn/Humanlike/Brute/Body/BruteBody_Hulk</Male>
+      <Female>Things/Pawn/Humanlike/Brute/Body/BruteBody_Hulk</Female>
+      <Thin>Things/Pawn/Humanlike/Brute/Body/BruteBody_Hulk</Thin>
+      <Hulk>Things/Pawn/Humanlike/Brute/Body/BruteBody_Hulk</Hulk>
+      <Child>Things/Pawn/Humanlike/Bodies/Naked_Child</Child>
+      <Baby>Things/Pawn/Humanlike/Bodies/Naked_Child</Baby><!-- Always covered by swaddled graphic -->
+    </bodyTypeGraphicPaths>
+  </FurDef>
+  
+  <FurDef>
+    <defName>Cov_UnggoyB</defName>
+    <noGraphic>true</noGraphic>
+    <bodyTypeGraphicPaths>
+      <Male>Things/Pawn/Humanlike/Grunt/Body/GruntBody_Thin</Male>
+      <Female>Things/Pawn/Humanlike/Grunt/Body/GruntBody_Thin</Female>
+      <Thin>Things/Pawn/Humanlike/Grunt/Body/GruntBody_Thin</Thin>
+      <Hulk>Things/Pawn/Humanlike/Grunt/Body/GruntBody_Thin</Hulk>
+      <Child>Things/Pawn/Humanlike/Bodies/Naked_Child</Child>
+      <Baby>Things/Pawn/Humanlike/Bodies/Naked_Child</Baby><!-- Always covered by swaddled graphic -->
+    </bodyTypeGraphicPaths>
+  </FurDef>
+
+  <FurDef>
+    <defName>Cov_JackalB</defName>
+    <noGraphic>true</noGraphic>
+    <bodyTypeGraphicPaths>
+      <Male>Things/Pawn/Humanlike/JK/Body/JKBody_Thin</Male>
+      <Female>Things/Pawn/Humanlike/JK/Body/JKBody_Thin</Female>
+      <Thin>Things/Pawn/Humanlike/JK/Body/JKBody_Thin</Thin>
+      <Hulk>Things/Pawn/Humanlike/JK/Body/JKBody_Thin</Hulk>
+      <Child>Things/Pawn/Humanlike/Bodies/Naked_Child</Child>
+      <Baby>Things/Pawn/Humanlike/Bodies/Naked_Child</Baby><!-- Always covered by swaddled graphic -->
+    </bodyTypeGraphicPaths>
+  </FurDef>
+  
+
+</Defs>

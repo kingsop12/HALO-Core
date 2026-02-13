@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<XenotypeDef>
+		<defName>Cov_Skirm</defName>
+		<label>T'vaoan</label>
+		<description>test.</description>
+		<descriptionShort>tee.</descriptionShort>
+		<iconPath>Icons/JackalHead</iconPath>
+		<inheritable>true</inheritable>
+                <nameMaker>NamerKigYar</nameMaker>
+		<genes>
+                        <li>Skin_SlateGray</li>
+                        <li>Skin_SkyGrey</li>
+                        <li>Cov_KigHead</li>
+                        <li>Cov_JackalB</li>
+                        <li>Beard_NoBeardOnly</li>
+                        <li>MinTemp_SmallDecrease</li>
+                        <li>CovSkirm_Hair</li>
+                       <li>KigYarVoice</li>
+                       <li>Elite_Blood_Purple</li>
+                       <li>Body_Thin</li>
+		</genes>
+	</XenotypeDef>
+</Defs>

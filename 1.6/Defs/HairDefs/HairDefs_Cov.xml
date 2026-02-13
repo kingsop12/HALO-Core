@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<StyleItemCategoryDef>
+	  <defName>Cov_HairStyle</defName>
+	  <label>Cov Hair style</label>
+	</StyleItemCategoryDef>
+
+	<HairDef Name="CovJackalHairBase" Abstract="true">
+		<styleGender>Any</styleGender>
+		<requiredGene>CovJackal_Hair</requiredGene>
+		<category>Cov_HairStyle</category>
+		<styleTags>
+			<li>JackalH</li>
+		</styleTags>
+	</HairDef>
+
+	<HairDef ParentName="CovJackalHairBase">
+		<defName>Cov_Jackal</defName>
+		<label>Jackal</label>
+		<texPath>Things/Pawn/Humanlike/JK/HairsCov/JackalHair</texPath>
+	</HairDef>
+
+
+	<HairDef Name="CovSkirmHairBase" Abstract="true">
+		<styleGender>Any</styleGender>
+		<requiredGene>CovSkirm_Hair</requiredGene>
+		<category>Cov_HairStyle</category>
+		<styleTags>
+			<li>KigH</li>
+		</styleTags>
+	</HairDef>
+
+	<HairDef ParentName="CovSkirmHairBase">
+		<defName>Cov_Skirm</defName>
+		<label>Skirm</label>
+		<texPath>Things/Pawn/Humanlike/JK/HairsCov/KigYarHair</texPath>
+	</HairDef>
+
+
+</Defs>

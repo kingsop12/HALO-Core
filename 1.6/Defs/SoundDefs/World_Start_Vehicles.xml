@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+  
+  <SoundDef>
+    <defName>WraithIgnitOff</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Vic/WraithIgnitOff</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>40~40</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>WraithIgnitOn</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Vic/WraithIgnitOn</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>40~40</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Wraith_Reload</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Vic/Wraith_Reload</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Shot_Wraith</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Vic/Shot_Wraith</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>40~40</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+ </Defs>

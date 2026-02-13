@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<XenotypeDef>
+		<defName>Cov_Jiralhanae</defName>
+		<label>Jiralhanae</label>
+		<description>test.</description>
+		<descriptionShort>tee.</descriptionShort>
+		<iconPath>Icons/BruteHead</iconPath>
+		<inheritable>true</inheritable>
+                <nameMaker>NamerJiralhanae</nameMaker>
+		<genes>
+			<li>Body_Hulk</li>
+                        <li>Cov_BruteHead</li>
+                        <li>Cov_BruteB</li>
+                        <li>BS_LargeFrame</li>
+                        <li MayRequire="ludeon.rimworld.Biotech">AptitudeStrong_Melee</li>
+                        <li>Pain_Reduced</li>
+                        <li>Immunity_Strong</li>
+                        <li>MinTemp_SmallDecrease</li>
+                        <li>MoveSpeed_Quick</li>
+                        <li>WoundHealing_Fast</li>
+                        <li>SZBodySize_13</li>
+                        <li>JiralhanaeVoice</li>
+                        <li>Hair_BaldOnly</li>
+                        <li>Beard_Brute</li>
+                        <li>Skin_LightBrown</li>
+                        <li>Skin_LightGrey</li>
+                        <li>Skin_Brown</li>
+                        <li>Grunt_Blood_Teal</li>
+		</genes>
+	</XenotypeDef>
+</Defs>

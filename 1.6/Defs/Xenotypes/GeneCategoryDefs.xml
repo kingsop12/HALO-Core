@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <GeneCategoryDef>
+    <defName>Cov_Blood_Color</defName>
+    <label>Halo Cosmetic - Blood Color</label>
+    <displayPriorityInXenotype>-19999</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>JiralhanaeBeards</defName>
+    <label>JiralhanaeBeards</label>
+    <displayPriorityInXenotype>-19998</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneCategoryDef>
+    <defName>Cov_HairStyle</defName>
+    <label>Cov Hair</label>
+    <displayPriorityInXenotype>-19997</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+</Defs>

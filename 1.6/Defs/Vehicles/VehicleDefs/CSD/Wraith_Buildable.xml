@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>Cov_Wraith_Blueprint</defName>
+		<label>Wraith Tank</label>
+		<description>A general purpose armoured personnel carrier, the Tango is a slow but hardy troop transport. Ample cargo holds, hardened armour, all-terrain capability and a turret that can fire either mobile or stationary, the main downside is fuel consumption and slightly thinner plating on the rear.\n\nDifferent to other tier 2 vehicles, this has regular fuel efficiency and is quite visible, its high fuel consumption rate putting a limit on the effective range.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Gunner x1.</description>
+		<designationCategory>Covenant_Tech</designationCategory>
+		
+		<graphicData>
+			<texPath>Wraith/Wraith</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(6, 6)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToBuild>11500</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+		
+		<size>(6, 6)</size>
+		
+		<researchPrerequisites>
+			<li>CSD_Research</li>
+		</researchPrerequisites>
+		
+		<costList>
+			<Steel>380</Steel>
+			<ComponentIndustrial>10</ComponentIndustrial>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		
+		<thingToSpawn>Cov_Wraith</thingToSpawn>
+		
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+</Defs>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <GeneDef Name="BloodColorBase" Abstract="True">
+        <biostatCpx>0</biostatCpx>
+        <randomChosen>true</randomChosen>
+        <displayCategory>Cov_Blood_Color</displayCategory>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <exclusionTags>
+            <li>BloodColor</li>
+            <li>AG_BloodType</li>
+            <li>BloodType</li>
+            <li>Blood</li>            
+        </exclusionTags>
+    </GeneDef>
+    
+    <!--********************* Elite *********************-->
+    <GeneDef ParentName="BloodColorBase">
+        <defName>Elite_Blood_Purple</defName>
+        <label>Purple Blood</label>
+        <description>Purple Blood</description>
+        <iconPath>UI/GeneIcons/BloodPurpleGene</iconPath>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <modExtensions>
+            <li Class="VEF.Genes.GeneExtension">
+                <customBloodThingDef>Purple_BloodSmear</customBloodThingDef>
+                <customBloodIcon>UI/GeneIcons/BloodPurpleGene</customBloodIcon>
+                <customBloodEffect>Damage_CovHitPurpleFlesh</customBloodEffect>
+                <customWoundsFromFleshtype>Sangheili</customWoundsFromFleshtype>
+                <customBloodSmearThingDef>Filth_Purple_BloodSmear</customBloodSmearThingDef>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!--********************* Grunt *********************-->
+    <GeneDef ParentName="BloodColorBase">
+        <defName>Grunt_Blood_Teal</defName>
+        <label>Teal Blood</label>
+        <description>Teal Blood</description>
+        <iconPath>UI/GeneIcons/BloodTealGene</iconPath>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <modExtensions>
+            <li Class="VEF.Genes.GeneExtension">
+                <customBloodThingDef>Teal_BloodSmear</customBloodThingDef>
+                <customBloodIcon>UI/GeneIcons/BloodTealGene</customBloodIcon>
+                <customBloodEffect>Damage_CovHitTealFlesh</customBloodEffect>
+                <customWoundsFromFleshtype>Unggoy</customWoundsFromFleshtype>
+                <customBloodSmearThingDef>Filth_Teal_BloodSmear</customBloodSmearThingDef>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef>
+		<defName>CovenantFaction</defName>
+		<label>The Covenant</label>
+		<description>A Large linking of Covenant bases collectively owned by the Covenant Empire.</description>
+		<pawnsPlural>Covenant Citzen</pawnsPlural>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>The Arbiter</leaderTitle>
+		<settlementNameMaker>Covenant_NamerFactionBases</settlementNameMaker>
+		<factionNameMaker>Covenant_NamerFaction</factionNameMaker>
+		<factionIconPath>World/CovBase</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/CovBase</settlementTexturePath>
+                <permanentEnemy>false</permanentEnemy>
+		<techLevel>Ultra</techLevel>
+                <disallowedMemes>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">Darkness</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">Tunneler</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">HighLife</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">MaleSupremacy</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">FemaleSupremacy</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">NaturePrimacy</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+                </disallowedMemes>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Archist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Proselytizer</li>
+		</requiredMemes>
+		<backstoryCategories>
+                    <li>Offworld</li>
+		</backstoryCategories>
+		<allowedCultures>
+			<li>CovenateCulture</li>
+		</allowedCultures>
+		<visitorTraderKinds>
+			<li>SangheiliTrader</li>
+		</visitorTraderKinds>
+		<!-- <caravanTraderKinds>
+			<li>Cov_Caravan_TraderGeneral</li>
+			<li>Cov_Caravan_Weapon</li>
+                        <li>Cov_Caravan_Tech</li>
+		</caravanTraderKinds> -->
+		<baseTraderKinds>
+			<li>Base_Outlander_Standard</li>
+		</baseTraderKinds>
+		<allowedArrivalTemperatureRange>
+			<min>-20</min>
+			<max>85</max>
+		</allowedArrivalTemperatureRange>
+                <raidCommonalityFromPointsCurve>
+                  <points>
+                    <li>(0, 1)</li>
+                  </points>
+                </raidCommonalityFromPointsCurve>
+		<raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+		<raidLootValueFromPointsCurve>
+		  <points>
+			<li>(35,     15)</li>
+			<li>(100,   120)</li>
+			<li>(1000,  500)</li>
+			<li>(2000,  800)</li>
+			<li>(40000, 10000)</li>
+		  </points>
+		</raidLootValueFromPointsCurve>
+		<maxPawnCostPerTotalPointsCurve>
+	          <points>
+			<li>(50, 90)</li>
+			<li>(500, 100)</li>
+			<li>(1000, 120)</li>
+			<li>(2000, 200)</li>
+			<li>(4000, 10000)</li>
+		  </points>
+		</maxPawnCostPerTotalPointsCurve>
+		<pawnGroupMakers>
+
+               <!-- Traders -->
+                  <li>
+                    <kindDef>Trader</kindDef>
+                    <commonality>1</commonality>
+                    <traders>
+                      <Cov_Trader>1</Cov_Trader>
+                    </traders>
+                    <carriers>
+                      <Cinder_Trailer MayRequire="breadmo.cinders">12</Cinder_Trailer>
+                      <Muffalo>6</Muffalo>
+                    </carriers>
+                    <guards>
+                    <Cov_Minor_Elite>5</Cov_Minor_Elite>
+                    </guards>
+                  </li>
+                 <!-- Raid -->
+			<li>
+				<kindDef>Combat</kindDef>
+                                <commonality>100</commonality>
+				<options>
+                                        <Cov_Minor_Jackal>5</Cov_Minor_Jackal>
+                                        <Cov_Ranger_Jackal>3</Cov_Ranger_Jackal>
+                                        <Cov_Minor_Grunt>15</Cov_Minor_Grunt>
+                                        <Cov_Melee_Skirm>5</Cov_Melee_Skirm>
+                                        <Cov_Minor_Skirm>6</Cov_Minor_Skirm>
+                                        <Cov_Major_Grunt>5</Cov_Major_Grunt>
+					<Cov_Minor_Elite>5</Cov_Minor_Elite>
+					<Cov_Major_Elite>2</Cov_Major_Elite>
+				</options>
+			</li>
+			<li>
+				<kindDef>Combat</kindDef>
+                                <commonality>100</commonality>
+				<options>
+                                        <Cov_Ranger_Jackal>3</Cov_Ranger_Jackal>
+                                        <Cov_Minor_Grunt>10</Cov_Minor_Grunt>
+                                        <Cov_Major_Grunt>5</Cov_Major_Grunt>
+                                        <Cov_Minor_Brute>3</Cov_Minor_Brute>
+				</options>
+			</li>
+			<li>
+				<kindDef>Combat</kindDef>
+                                <commonality>100</commonality>
+				<options>
+                                        <Cov_Melee_Skirm>5</Cov_Melee_Skirm>
+                                        <Cov_Minor_Skirm>6</Cov_Minor_Skirm>
+                                        <Cov_Minor_Jackal>5</Cov_Minor_Jackal>
+                                        <Cov_Minor_Grunt>10</Cov_Minor_Grunt>
+				</options>
+			</li>
+			<li>
+				<kindDef>Combat</kindDef>
+                                <commonality>10</commonality>
+				<options>
+                                        <Cov_Minor_Grunt>5</Cov_Minor_Grunt>
+                                        <Cov_Major_Grunt>2</Cov_Major_Grunt>
+                                        <Cov_Minor_Brute>1</Cov_Minor_Brute>
+				</options>
+			</li>
+			<li>
+				<kindDef>Combat</kindDef>
+                                <commonality>70</commonality>
+				<options>
+					<Cov_Minor_Elite>15</Cov_Minor_Elite>
+					<Cov_Major_Elite>3</Cov_Major_Elite>
+				</options>
+			</li>
+			<li>
+				<kindDef>Combat</kindDef>
+                                <commonality>50</commonality>
+				<options>
+                                        <Cov_Minor_Grunt>12</Cov_Minor_Grunt>
+					<Cov_Major_Grunt>11</Cov_Major_Grunt>
+                                        <Cov_Minor_Jackal>2</Cov_Minor_Jackal>
+                                        <Cov_Minor_Elite>2</Cov_Minor_Elite>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<SangheiliTrader>1</SangheiliTrader>
+				</traders>
+				<carriers>
+					<Muffalo>3</Muffalo>
+				</carriers>
+				<guards>
+                                        <Cov_Minor_Elite>3</Cov_Minor_Elite>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+                                        <Cov_Minor_Skirm>6</Cov_Minor_Skirm>
+                                        <Cov_Minor_Jackal>5</Cov_Minor_Jackal>
+                                        <Cov_Minor_Grunt>15</Cov_Minor_Grunt>
+					<Cov_Minor_Elite>5</Cov_Minor_Elite>
+
+				</options>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+                                        <Cov_Minor_Skirm>6</Cov_Minor_Skirm>
+                                        <Cov_Ranger_Jackal>3</Cov_Ranger_Jackal>
+                                        <Cov_Melee_Skirm>5</Cov_Melee_Skirm>
+                                        <Cov_Minor_Jackal>4</Cov_Minor_Jackal>
+                                        <Cov_Minor_Grunt>5</Cov_Minor_Grunt>
+                                        <Cov_Major_Grunt>5</Cov_Major_Grunt>
+                                        <Cov_Minor_Brute>4</Cov_Minor_Brute>
+					<Cov_Minor_Elite>4</Cov_Minor_Elite>
+					<Cov_Major_Elite>2</Cov_Major_Elite>
+				</options>
+			</li>
+		</pawnGroupMakers>
+
+	</FactionDef>
+
+</Defs>

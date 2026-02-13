@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<Vehicles.VehicleDef Name = "Cov_VehiclePawn_Land" ParentName = "BaseVehiclePawn" Abstract = "True">
+		<properties>
+			<worldSpeedMultiplier>3</worldSpeedMultiplier>
+		</properties>
+	
+	</Vehicles.VehicleDef>
+	
+	<Vehicles.VehicleDef Name = "VehiclePawn_Cov" ParentName = "Cov_VehiclePawn_Land" Abstract = "True">
+		
+		<soundOneShotsOnEvent Inherit = "False">
+			<li>
+				<key>IgnitionOn</key>
+				<value>WraithIgnitOn</value>
+			</li>
+			<li>
+				<key>IgnitionOff</key>
+				<value>WraithIgnitOff</value>
+			</li>
+		</soundOneShotsOnEvent>
+	</Vehicles.VehicleDef>
+	
+</Defs>

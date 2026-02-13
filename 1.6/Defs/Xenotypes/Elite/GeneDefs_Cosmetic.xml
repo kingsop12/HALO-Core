@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<GeneDef>
+		<defName>Cov_SangheiliB</defName>
+		<label>Sangheili body</label>
+		<labelShortAdj>Sangheili</labelShortAdj>
+		<description>test</description>
+		<exclusionTags>
+			<li>AG_Bodies</li>
+			<li>Bodies</li>
+			<li>Body</li>
+		</exclusionTags>
+		<marketValueFactor>1.05</marketValueFactor>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<displayOrderInCategory>435</displayOrderInCategory>
+		<iconPath>Icons/EliteBody</iconPath>
+		
+		
+		<fur>Cov_SangheiliB</fur>
+		<skinIsHairColor>false</skinIsHairColor>
+		<tattoosVisible>false</tattoosVisible>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_Fur</nodeClass>
+				<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Skin</colorType>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<useSkinColorForFur>true</useSkinColorForFur>
+			</li>
+		</modExtensions>
+	</GeneDef>
+</Defs>

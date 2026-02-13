@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<XenotypeDef>
+		<defName>Cov_Sangheili</defName>
+		<label>Sangheili</label>
+		<description>test.</description>
+		<descriptionShort>tee.</descriptionShort>
+		<iconPath>Icons/EliteHead</iconPath>
+		<inheritable>true</inheritable>
+                <nameMaker>NamerSangheili</nameMaker>
+		<genes>
+			<li>Body_Standard</li>
+			<li>Skin_InkBlack</li>
+                        <li>Skin_SlateGray</li>
+                        <li>Cov_EliteHead</li>
+                        <li>Cov_SangheiliB</li>
+                        <li>BS_LargeFrame</li>
+                        <li>Hair_BaldOnly</li>
+                        <li>Beard_NoBeardOnly</li>
+                        <li MayRequire="ludeon.rimworld.Biotech">AptitudeStrong_Melee</li>
+                        <li MayRequire="ludeon.rimworld.Biotech">AptitudePoor_Medicine</li>
+                        <li>Pain_Reduced</li>
+                        <li>Immunity_Strong</li>
+                        <li>MinTemp_SmallDecrease</li>
+                        <li>MoveSpeed_Quick</li>
+                       <li>WoundHealing_Fast</li>
+                       <li>SZBodySize_11</li>
+                       <li>SangheiliVoice</li>
+                       <li>Elite_Blood_Purple</li>
+		</genes>
+	</XenotypeDef>
+</Defs>

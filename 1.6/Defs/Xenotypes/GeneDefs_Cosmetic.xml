@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Hair restrictions -->
+
+  <GeneDef ParentName="GeneBeardStyleBase">
+    <defName>Beard_Brute</defName>
+    <label>Brute beards</label>
+    <labelShortAdj>BruteBs</labelShortAdj>
+    <description>Carriers of this gene always have Jiralhanae.</description>
+    <iconPath>Icons/Beard_BruteG</iconPath>
+    <displayOrderInCategory>66</displayOrderInCategory>
+    <womenCanHaveBeards>false</womenCanHaveBeards>
+    <beardTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>JiralhanaeBeards</li>
+      </tags>
+    </beardTagFilter>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneHairStyleBase">
+    <defName>CovJackal_Haire</defName>
+    <label>Jackal-haired</label>
+    <labelShortAdj>Grass</labelShortAdj>
+    <description>Carriers of this gene can only grow this hair.</description>
+    <iconPath>Icons/JackalHair</iconPath>
+    <displayOrderInCategory>55</displayOrderInCategory>
+    <hairTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>JackalH</li>
+      </tags>
+    </hairTagFilter>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneHairStyleBase">
+    <defName>CovSkirm_Haire</defName>
+    <label>Kig-haired</label>
+    <labelShortAdj>Fluffy</labelShortAdj>
+    <description>Carriers of this gene can only grow this hair.</description>
+    <iconPath>Icons/Kig-YarHair</iconPath>
+    <displayOrderInCategory>55</displayOrderInCategory>
+    <hairTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>KigH</li>
+      </tags>
+    </hairTagFilter>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_LightBrown</defName>
+    <label>Light skin</label>
+    <labelShortAdj>Lightbrown</labelShortAdj>
+    <description>Carriers of this gene have brown skin, unlike natural skin tones.</description>
+    <skinColorOverride>(192,135,94,255)</skinColorOverride>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <displayOrderInCategory>93</displayOrderInCategory>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_LightGrey</defName>
+    <label>Light Grey</label>
+    <labelShortAdj>Grey</labelShortAdj>
+    <description>Carriers of this gene have Grey skin, unlike natural skin tones.</description>
+    <skinColorOverride>(95,95,97,255)</skinColorOverride>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <displayOrderInCategory>93</displayOrderInCategory>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_Brown</defName>
+    <label>Brown</label>
+    <labelShortAdj>brown</labelShortAdj>
+    <description>Carriers of this gene have Grey skin, unlike natural skin tones.</description>
+    <skinColorOverride>(102,81,62,255)</skinColorOverride>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <displayOrderInCategory>93</displayOrderInCategory>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_SkyGrey</defName>
+    <label>Grey</label>
+    <labelShortAdj>brown</labelShortAdj>
+    <description>Carriers of this gene have Grey skin, unlike natural skin tones.</description>
+    <skinColorOverride>(151,151,151,255)</skinColorOverride>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <displayOrderInCategory>93</displayOrderInCategory>
+  </GeneDef>
+
+
+
+</Defs>

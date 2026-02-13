@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerJiralhanae</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[JiralhanaeMale] [JiralhanaeFemale]</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>Jiralhanae_Name_Male</keyword>
+          <path>Sangheili_Names/JiralhanaeMale</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Jiralhanae_Name_Female</keyword>
+          <path>Jiralhanae_Names/JiralhanaeFemale</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Jiralhanae_Name_Last</keyword>
+          <path>Jiralhanae_Names/Jiralhanaelast</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+	
+	<RulePackDef>
+		<defName>NamerJiralhanaeMale</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[JiralhanaeNameMale] [JiralhanaeNameLast]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>JiralhanaeNameMale->Jiralhanae_Names/JiralhanaeMale</li>
+				<li>JiralhanaeNameLast->Jiralhanae_Names/Jiralhanaelast</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+  <RulePackDef>
+		<defName>NamerJiralhanaeFemale</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[JiralhanaeNameFemale] [JiralhanaeNameLast]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>JiralhanaeNameFemale->Jiralhanae_Names/JiralhanaeFemale</li>
+				<li>JiralhanaeNameLast->Jiralhanae_Names/Jiralhanaelast</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+
+</Defs>

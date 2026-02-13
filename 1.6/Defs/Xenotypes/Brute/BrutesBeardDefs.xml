@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Categories -->
+
+  <StyleItemCategoryDef>
+    <defName>JiralhanaeBeards</defName>
+    <label>Jiralhanae</label>
+  </StyleItemCategoryDef>
+
+
+  <!-- Beards -->
+
+  <BeardDef Name="BruteBeardBase" Abstract="True">
+    <category>JiralhanaeBeards</category>
+    <requiredGene>Cov_BruteHead</requiredGene>
+    <styleTags>
+      <li>JiralhanaeBeards</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef ParentName="BruteBeardBase">
+    <defName>BruteBeard_a</defName>
+    <label>Chin Beard</label>
+    <texPath>Things/Pawn/Humanlike/Brute/Beards/BruteBeard_a</texPath>
+  </BeardDef>
+
+  <BeardDef ParentName="BruteBeardBase">
+    <defName>BruteBeardKnots</defName>
+    <label>Atriox</label>
+    <texPath>Things/Pawn/Humanlike/Brute/Beards/BruteBeard_c</texPath>
+  </BeardDef>
+
+  <BeardDef ParentName="BruteBeardBase">
+    <defName>BruteBeard_b</defName>
+    <label>Long Beard</label>
+    <texPath>Things/Pawn/Humanlike/Brute/Beards/BruteBeard_b</texPath>
+  </BeardDef>
+
+  <BeardDef ParentName="BruteBeardBase">
+    <defName>BruteBeard_d</defName>
+    <label>Tartarus</label>
+    <texPath>Things/Pawn/Humanlike/Brute/Beards/BruteBeard_d</texPath>
+  </BeardDef>
+
+</Defs>

@@ -1,0 +1,39 @@
+<Defs>
+  <GeneDef ParentName="GeneJawBase">
+    <defName>Cov_JackalHead</defName>
+    <label>Jackal Head</label>
+    <description>Carriers of this gene have a Jackal head</description>
+    <iconPath>Icons/JackalHead</iconPath>
+    <displayOrderInCategory>97</displayOrderInCategory>
+    <forcedHeadTypes>
+      <li>Cov_JackalHead_Normal</li>
+    </forcedHeadTypes>
+    <selectionWeight>0.25</selectionWeight>
+    <canGenerateInGeneSet>true</canGenerateInGeneSet>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <disableFacialAnimations>true</disableFacialAnimations>
+        <facialDisabler>
+          <skinName>retain</skinName>
+          <lidName>retain</lidName>
+          <lidOptionsName>retain</lidOptionsName>
+          <eyeballName>retain</eyeballName>
+          <mouthName>retain</mouthName>
+          <browName>retain</browName>
+        </facialDisabler>
+      </li>
+    </modExtensions>
+  </GeneDef>   
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Cov_JackalHead_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/JK/Head/Jackal_Head</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <selectionWeight>99999</selectionWeight>
+    <requiredGenes>
+      <li>Cov_JackalHead</li>
+    </requiredGenes>
+  </HeadTypeDef>
+ 
+</Defs>

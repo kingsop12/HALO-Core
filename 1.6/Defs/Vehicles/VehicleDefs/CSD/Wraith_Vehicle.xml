@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+	<Vehicles.VehicleDef ParentName="VehiclePawn_Cov">
+		<defName>Cov_Wraith</defName>
+		<label>Wraith</label>
+		<description>The Zurdo-pattern Wraith is the primary armored ground vehicle used by the Covenant. The Covenant deploys Wraiths in tactical ground engagements, where they serve in both anti-infantry and anti-armor roles. The Wraith's firepower also makes it ideal for destroying structures.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Gunner x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Chemfuel</description>
+		
+		<graphicData>
+			<texPath>Wraith/Wraith</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(6, 6)</drawSize>
+			<color>(109,67,166)</color>
+			<colorTwo>(56, 55, 50)</colorTwo>
+			<colorThree>(100, 69, 59)</colorThree>
+		</graphicData>
+		
+		<fillPercent>1</fillPercent>
+		
+		<buildDef>Cov_Wraith_Blueprint</buildDef>
+		
+		<size>(6, 6)</size>
+		
+		<vehicleCategory>Combat</vehicleCategory>
+		<techLevel>Industrial</techLevel>
+		<vehicleType>Land</vehicleType>
+		
+		<statBases>
+			<ArmorRating_Blunt>0.70</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.90</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.0</ArmorRating_Heat>
+			<Flammability>0.5</Flammability>
+			<MarketValue>4650</MarketValue>
+		</statBases>
+		
+		<vehicleStats>
+			<Mass>450</Mass>
+			<MoveSpeed>6.4</MoveSpeed>
+			<CargoCapacity>260</CargoCapacity>
+			<RepairRate>0.3</RepairRate>
+			<AccelerationRate MayRequire="oskarpotocki.vanillavehiclesexpanded">0.05</AccelerationRate>
+		</vehicleStats>
+		
+		<soundSustainersOnEvent>
+			<li>
+				<start>IgnitionOn</start>
+				<stop>IgnitionOff</stop>
+				<value>WraithLoop</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<race>
+			<baseBodySize>4.5</baseBodySize>
+		</race>
+		
+		<properties>
+			<customRoadCosts AssignDefaults = "0.4"/>
+			<visibilityWeight>4.5</visibilityWeight>
+
+
+                        <worldSpeedMultiplier>1.1</worldSpeedMultiplier>
+                        <offRoadMultiplier>0.75</offRoadMultiplier>
+                            <winterSpeedMultiplier>0.75</winterSpeedMultiplier>
+
+                                 <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/>
+                                         <customBiomeCosts>
+				                 <li>
+					              <key>Lake</key>
+					              <value>0.5</value>
+				                 </li>
+                                         </customBiomeCosts>
+                        <customRoadCosts AssignDefaults = "0.25"/>
+
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 3)</li>
+			</vehicleJobLimitations>
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Driver</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<hitbox>
+						<cells>
+							<li>(0, 1)</li>
+						</cells>
+					</hitbox>
+				</li>
+				<li>
+					<key>gunner</key>
+					<label>Gunner</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<handlingTypes>Turret</handlingTypes>
+					
+					<turretIds>
+						<li>mainTurret</li>
+					</turretIds>
+					
+					<hitbox>
+						<cells>
+							<li>(0, 0)</li>
+						</cells>
+					</hitbox>
+				</li>
+
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>Engine</key>
+				<label>Plasma Engine</label>
+				<health>200</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<hitbox>
+					<cells>
+						<li>(0, -2)</li>
+						<li>(0, -2)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>LeftTrack</key>
+				<label>Gravity Left</label>
+				<health>200</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>HoverPad</li>
+				</tags>
+				
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<side>Left</side>
+
+					<cells>
+						<li>(-1, 2)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>RightTrack</key>
+				<label>Gravity Right</label>
+				<health>200</health>
+				<depth>Internal</depth>
+					
+				<tags>
+					<li>HoverPad</li>
+				</tags>
+				
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<side>Right</side>
+
+					<cells>
+						<li>(-1, 2)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>FrontLeftDriveSprocket</key>
+				<label>Front Left Gravity Sprocket</label>
+				<health>25</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Pad</li>
+				</tags>
+				
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<cells>
+						<li>(-1, 2)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>FrontRightDriveSprocket</key>
+				<label>Front Right Gravity Sprocket</label>
+				<health>25</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Pad</li>
+				</tags>
+				
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<cells>
+						<li>(1, 1)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>BackLeftDriveSprocket</key>
+				<label>Back Left Gravity Sprocket</label>
+				<health>25</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Pad</li>
+				</tags>
+				
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<cells>
+						<li>(-1, -2)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>BackRightDriveSprocket</key>
+				<label>Back Right Gravity Sprocket</label>
+				<health>25</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Pad</li>
+				</tags>
+				
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<cells>
+						<li>(1, -2)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>Gearbox</key>
+				<label>Gravity Box</label>
+				<health>150</health>
+				<depth>Internal</depth>
+				
+				<hitbox>
+					<cells>
+						<li>(0, 1)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>FrontArmorPlating</key>
+				<label>Front Armor Plating</label>
+				<health>220</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0.52</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+				</armor>
+				
+				<hitbox>
+					<side>Front</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>LeftArmorPlating</key>
+				<label>Left Armor Plating</label>
+				<health>220</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0.52</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+				</armor>
+				
+				<hitbox>
+					<side>Left</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>RightArmorPlating</key>
+				<label>Right Armor Plating</label>
+				<health>220</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0.52</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+				</armor>
+				
+				<hitbox>
+					<side>Right</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>BackArmorPlating</key>
+				<label>Rear Armor Plating</label>
+				<health>170</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Back</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Chemtank</key>
+				<label>Plasma Tank</label>
+				<health>200</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_FuelLeak"/>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<hitbox>
+					<cells>
+						<li>(0, -1)</li>
+					</cells>
+				</hitbox>
+			</li>
+			<li>
+				<key>Dashboard</key>
+				<label>Dashboard</label>
+				<health>50</health>
+				<depth>Internal</depth>
+				<hitWeight>5</hitWeight>
+			</li>
+			<li>
+				<key>SteeringApparatus</key>
+				<label>Steering Apparatus</label>
+				<health>40</health>
+				<depth>Internal</depth>
+				<hitWeight>5</hitWeight>
+			</li>
+			<li>
+				<key>Alternator</key>
+				<label>Gravity Gen</label>
+				<health>50</health>
+				<depth>Internal</depth>
+			</li>
+			<li>
+				<key>Roof</key>
+				<label>Roof</label>
+				<health>130</health>
+				<depth>External</depth>
+				<hitWeight>10</hitWeight>
+				
+				<armor>
+					<ArmorRating_Blunt>0.62</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+				</armor>
+			</li>
+		</components>
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<fuelType>Chemfuel</fuelType>
+				<leakDef>Filth_Fuel</leakDef>
+				<fuelConsumptionRate>28</fuelConsumptionRate>
+				<fuelConsumptionWorldMultiplier>1</fuelConsumptionWorldMultiplier>
+				<fuelCapacity>75</fuelCapacity>
+			</li>
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>Wraith_MainTurret</turretDef>
+						
+						<renderProperties>
+							<north>(0, -0.55)</north>
+							<south>(0, 1.5)</south>
+							<east>(-1.30, 0.99)</east>
+						</renderProperties>
+						
+						<gizmoLabel>Main Turret</gizmoLabel>
+						
+						<angleRestricted/>
+						<aimPieOffset>(0, 0.65)</aimPieOffset>
+						
+						<key>mainTurret</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+	</Vehicles.VehicleDef>
+</Defs>

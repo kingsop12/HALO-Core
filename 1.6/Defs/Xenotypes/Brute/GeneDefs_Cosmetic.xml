@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<GeneDef>
+		<defName>Cov_BruteB</defName>
+		<label>Jiralhanae body</label>
+		<labelShortAdj>Jiralhanae</labelShortAdj>
+		<description>test</description>
+		<exclusionTags>
+		</exclusionTags>
+		<marketValueFactor>1.05</marketValueFactor>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<displayOrderInCategory>435</displayOrderInCategory>
+		<iconPath>Icons/BruteBody</iconPath>
+		
+		
+		<fur>Cov_BruteB</fur>
+		<skinIsHairColor>false</skinIsHairColor>
+		<tattoosVisible>false</tattoosVisible>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_Fur</nodeClass>
+				<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Skin</colorType>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<useSkinColorForFur>true</useSkinColorForFur>
+			</li>
+		</modExtensions>
+	</GeneDef>
+</Defs>

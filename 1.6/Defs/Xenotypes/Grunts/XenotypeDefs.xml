@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<XenotypeDef>
+		<defName>Cov_Unggoy</defName>
+		<label>Unggoy</label>
+		<description>test.</description>
+		<descriptionShort>tee.</descriptionShort>
+		<iconPath>Icons/GruntHead</iconPath>
+		<inheritable>true</inheritable>
+                <nameMaker>NamerUnggoyMale</nameMaker>
+		<genes>
+                        <li>Skin_SlateGray</li>
+                        <li>Cov_GruntHead</li>
+                        <li>Cov_UnggoyB</li>
+                        <li>Hair_BaldOnly</li>
+                        <li>Beard_NoBeardOnly</li>
+                        <li>MinTemp_SmallDecrease</li>
+                       <li>UnggoyVoice</li>
+                       <li>Grunt_Blood_Teal</li>
+                       <li>Body_Thin</li>
+		</genes>
+	</XenotypeDef>
+</Defs>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<GeneDef>
+		<defName>Cov_KigB</defName>
+		<label>T'vaoan body</label>
+		<labelShortAdj>Skirm</labelShortAdj>
+		<description>test</description>
+		<exclusionTags>
+		</exclusionTags>
+		<marketValueFactor>1.05</marketValueFactor>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<displayOrderInCategory>435</displayOrderInCategory>
+		<iconPath>Icons/JackalAndKigYarBody</iconPath>
+		
+		
+		<fur>Cov_JackalB</fur>
+		<skinIsHairColor>false</skinIsHairColor>
+		<tattoosVisible>false</tattoosVisible>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_Fur</nodeClass>
+				<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Skin</colorType>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<useSkinColorForFur>true</useSkinColorForFur>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneHairStyleBase">
+		<defName>CovSkirm_Hair</defName>
+		<label>T'vaoan Hair</label>
+		<description>Carriers of this gene grow a patch of grass on the head.</description>
+		<iconPath>Icons/Kig-YarHair</iconPath>
+		<hairTagFilter>
+			<whitelist>true</whitelist>
+			<tags>
+				<li>KigH</li>
+			</tags>
+		</hairTagFilter>
+	</GeneDef>
+
+</Defs>
