@@ -11,7 +11,7 @@
     <canSiege>true</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>The Arbiter</leaderTitle>
-    <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+    <factionIconPath>World/WorldObjects/CovBase</factionIconPath>
     <techLevel>Ultra</techLevel>
     <factionNameMaker>Covenant_NamerFaction</factionNameMaker>
     <settlementNameMaker>Covenant_NamerFactionBases</settlementNameMaker>
@@ -208,5 +208,6 @@
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>90</configurationListOrderPriority>
   </FactionDef>
+
 
 </Defs>
