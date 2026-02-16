@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <PawnKindDef Name="Cov_EliteBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>CovenantMain</defaultFactionType>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <gearHealthRange>0.75~2.0</gearHealthRange>
+    <invNutrition>2.55</invNutrition>
+    <apparelTags>
+      <li>UndersuitE</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef Name="Cov_GruntBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>CovenantMain</defaultFactionType>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <gearHealthRange>0.75~2.0</gearHealthRange>
+    <invNutrition>2.55</invNutrition>
+    <apparelTags>
+      <li>GruntMask</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef Name="Cov_BruteBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>CovenantMain</defaultFactionType>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <gearHealthRange>0.75~2.0</gearHealthRange>
+    <invNutrition>2.55</invNutrition>
+    <apparelTags>
+      <li>BruteUnderArmor</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef Name="Cov_JackBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>CovenantMain</defaultFactionType>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <gearHealthRange>0.75~2.0</gearHealthRange>
+    <invNutrition>2.55</invNutrition>
+    <apparelTags>
+      <li>JackalArmor</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef Name="Cov_RJackBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>CovenantMain</defaultFactionType>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <gearHealthRange>0.75~2.0</gearHealthRange>
+    <invNutrition>2.55</invNutrition>
+    <apparelTags>
+      <li>JackalHelmet</li>
+      <li>JackalArmor</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef Name="Cov_SkirmBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>CovenantMain</defaultFactionType>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <gearHealthRange>0.75~2.0</gearHealthRange>
+    <invNutrition>2.55</invNutrition>
+    <apparelTags>
+      <li>KigYarHelmet</li>
+      <li>ArmorKigYar</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <!--====== Traders and Civillians ====== -->
+  <PawnKindDef ParentName="Cov_EliteBase" Name="Cov_EliteCivBase">
+    <defName>Cov_EliteCiv</defName>
+    <label>Sangheili Civilian</label>
+    <combatPower>45</combatPower>
+    <itemQuality>Poor</itemQuality>
+    <isFighter>false</isFighter>
+    <weaponTags>
+      <li>Cov_PlasmaPistol</li>
+      <li>Cov_PlasmaRifle</li>
+    </weaponTags>
+    <weaponMoney>40000~50000</weaponMoney>
+    <apparelMoney>40200~60400</apparelMoney>
+    <apparelTags>
+      <li>SangheiliMinorHelmet</li>
+      <li>SangheiliMinorArmor</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+    <!-- <techHediffsChance>0.06</techHediffsChance> 
+    <techHediffsMoney>5000~60000</techHediffsMoney>
+    <techHediffsTags>
+    </techHediffsTags> -->
+    <initialWillRange>10~15</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Cov_Sangheili>1.0</Cov_Sangheili>
+      </xenotypeChances>
+    </xenotypeSet>   
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+      <li>ManualSkilled</li>
+      <li>Cleaning</li>
+      <li>Hauling</li>
+      <li>Mining</li>
+      <li>Firefighting</li>
+    </requiredWorkTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>1~5</range>
+      </li>
+	    <li>
+        <skill>Melee</skill>
+        <range>1~5</range>
+      </li>	    	     
+	  </skills>
+  </PawnKindDef>
+
+
+  <PawnKindDef ParentName="Cov_EliteBase" Name="SangheiliTrader">
+    <defName>SangheiliTrader</defName>
+    <label>Covenant Trader</label>
+    <trader>true</trader>
+    <combatPower>45</combatPower>
+    <isFighter>false</isFighter>
+    <acceptArrestChanceFactor>0</acceptArrestChanceFactor>
+    <itemQuality>Normal</itemQuality>
+    <weaponTags>
+    </weaponTags>
+    <weaponMoney>40200~70200</weaponMoney>
+    <apparelMoney>40000~60000</apparelMoney>
+    <apparelTags>
+      <li>SangheiliMajorHelmet</li>
+      <li>SangheiliMajorArmor</li>
+    </apparelTags>
+    <initialWillRange>2~4</initialWillRange>
+    <initialResistanceRange>12~20</initialResistanceRange>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Cov_Sangheili>1.0</Cov_Sangheili>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+
+</Defs>
