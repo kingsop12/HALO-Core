@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Elite -->
+  <PawnKindDef Name="Cov_MEliteBase" ParentName="Cov_EliteBase" Abstract="True">
+    <label>Sangheili</label>
+    <combatPower>30</combatPower>
+    <initialResistanceRange>25~44</initialResistanceRange>
+    <initialWillRange>25~50</initialWillRange>
+    <isFighter>true</isFighter>
+    <gearHealthRange>0.6~2</gearHealthRange>
+    <apparelMoney>40000~60000</apparelMoney>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Cov_Sangheili>1.0</Cov_Sangheili>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>2200~7000</techHediffsMoney>
+    <backstoryCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>UndersuitE</li>
+    </apparelTags>
+    <maxGenerationAge>45</maxGenerationAge>
+    <disallowedTraits>
+      <li>BodyPurist</li>
+      <li>Brawler</li>
+    </disallowedTraits>
+  </PawnKindDef>
+
+  <!-- Grunts -->
+
+  <PawnKindDef Name="Cov_MGruntBase" ParentName="Cov_GruntBase" Abstract="True">
+    <label>Unggoy</label>
+    <combatPower>10</combatPower>
+    <initialResistanceRange>5~24</initialResistanceRange>
+    <initialWillRange>25~50</initialWillRange>
+    <isFighter>true</isFighter>
+    <gearHealthRange>0.6~2</gearHealthRange>
+    <apparelMoney>40000~50000</apparelMoney>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Cov_Unggoy>1</Cov_Unggoy>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>2200~7000</techHediffsMoney>
+    <backstoryCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+    </backstoryCategories>
+    <apparelRequired>
+      <li>GruntMask</li>
+    </apparelRequired>
+    <apparelTags>
+      <li>GruntMask</li>
+    </apparelTags>
+    <maxGenerationAge>45</maxGenerationAge>
+    <disallowedTraits>
+      <li>BodyPurist</li>
+      <li>Brawler</li>
+    </disallowedTraits>
+  </PawnKindDef>
+
+  <!-- KigYar -->
+
+  <PawnKindDef Name="Cov_MJackBase" ParentName="Cov_JackBase" Abstract="True">
+    <label>Ibie'shan</label>
+    <combatPower>10</combatPower>
+    <initialResistanceRange>5~24</initialResistanceRange>
+    <initialWillRange>25~50</initialWillRange>
+    <isFighter>true</isFighter>
+    <gearHealthRange>0.6~2</gearHealthRange>
+    <apparelMoney>40000~50000</apparelMoney>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Cov_Jackal>1</Cov_Jackal>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>2200~7000</techHediffsMoney>
+    <backstoryCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>JackalArmor</li>
+      <li>Cov_PDG</li>
+    </apparelTags>
+    <maxGenerationAge>45</maxGenerationAge>
+    <disallowedTraits>
+      <li>BodyPurist</li>
+      <li>Brawler</li>
+    </disallowedTraits>
+  </PawnKindDef>
+
+  <PawnKindDef Name="Cov_RangeJackBase" ParentName="Cov_RJackBase" Abstract="True">
+    <label>Ranger Ibie'shan</label>
+    <combatPower>10</combatPower>
+    <initialResistanceRange>5~24</initialResistanceRange>
+    <initialWillRange>25~50</initialWillRange>
+    <isFighter>true</isFighter>
+    <gearHealthRange>0.6~2</gearHealthRange>
+    <apparelMoney>40000~50000</apparelMoney>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Cov_Jackal>1</Cov_Jackal>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>2200~7000</techHediffsMoney>
+    <backstoryCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+    </backstoryCategories>
+    <apparelTags>
+      <li>JackalArmor</li>
+      <li>JackalHelmet</li>
+    </apparelTags>
+    <maxGenerationAge>45</maxGenerationAge>
+    <disallowedTraits>
+      <li>BodyPurist</li>
+      <li>Brawler</li>
+    </disallowedTraits>
+  </PawnKindDef>
+
+  <PawnKindDef Name="Cov_MSkirmBase" ParentName="Cov_SkirmBase" Abstract="True">
+    <label>T'vaoan</label>
+    <combatPower>10</combatPower>
+    <initialResistanceRange>5~24</initialResistanceRange>
+    <initialWillRange>25~50</initialWillRange>
+    <isFighter>true</isFighter>
+    <gearHealthRange>0.6~2</gearHealthRange>
+    <apparelMoney>40000~50000</apparelMoney>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Cov_Skirm>1</Cov_Skirm>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>2200~7000</techHediffsMoney>
+    <backstoryCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+    </backstoryCategories>
+    <apparelRequired>
+      <li>KigArmor</li>
+      <li>Cov_KigPauldron</li>
+      <li>Cov_PDG</li>
+    </apparelRequired>
+    <apparelTags>
+      <li>ArmorKigYar</li>
+      <li>Cov_KigPauldron</li>
+    </apparelTags>
+    <maxGenerationAge>45</maxGenerationAge>
+    <disallowedTraits>
+      <li>BodyPurist</li>
+      <li>Brawler</li>
+    </disallowedTraits>
+  </PawnKindDef>
+
+  <!-- Brute -->
+
+  <PawnKindDef Name="Cov_MBruteBase" ParentName="Cov_BruteBase" Abstract="True">
+    <label>Jiralhanae</label>
+    <combatPower>20</combatPower>
+    <initialResistanceRange>25~44</initialResistanceRange>
+    <initialWillRange>25~50</initialWillRange>
+    <isFighter>true</isFighter>
+    <gearHealthRange>0.6~2</gearHealthRange>
+    <apparelMoney>40000~50000</apparelMoney>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Cov_Jiralhanae>1.0</Cov_Jiralhanae>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelAllowHeadgearChance>0.9</apparelAllowHeadgearChance>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>2200~7000</techHediffsMoney>
+    <backstoryCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+    </backstoryCategories>
+    <apparelRequired>
+      <li>UndersuitB</li>
+    </apparelRequired>
+    <apparelTags>
+      <li>BruteUnderArmor</li>
+    </apparelTags>
+    <maxGenerationAge>45</maxGenerationAge>
+    <disallowedTraits>
+      <li>BodyPurist</li>
+      <li>Brawler</li>
+    </disallowedTraits>
+  </PawnKindDef>
+
+  <!-- Low Tier Elite -->
+  <PawnKindDef ParentName="Cov_MEliteBase">
+    <defName>Cov_Minor_Elite</defName>
+    <label>Minor Sangheili</label>
+    <combatPower>40</combatPower>
+    <apparelRequired>
+      <li>MinorHelm</li>
+      <li>MinorArmor</li>
+      <li>Cov_MinorPauldron</li>
+    </apparelRequired>
+    <apparelTags>
+      <li>SangheiliMinorArmor</li>
+      <li>SangheiliMinorHelmet</li>
+      <li>MinorPauldron</li>
+    </apparelTags>
+    <weaponMoney>1000~8000</weaponMoney>
+    <weaponTags>
+      <li>Cov_PlasmaPistol</li>
+      <li>Cov_ELowTier</li>
+      <li>Cov_EnergySword</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~8</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>7~8</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Cov_MEliteBase">
+    <defName>Cov_Ranger_Elite</defName>
+    <label>Ranger Sangheili</label>
+    <combatPower>40</combatPower>
+    <apparelTags>
+      <li>SangheiliRangerArmor</li>
+      <li>SangheiliRangerHelmet</li>
+      <li>RangerPauldron</li>
+    </apparelTags>
+    <weaponMoney>1000~8000</weaponMoney>
+    <weaponTags>
+      <li>Cov_PlasmaPistol</li>
+      <li>Cov_ELowTier</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~8</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>7~8</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Cov_MEliteBase">
+    <defName>Cov_SpecOp_Elite</defName>
+    <label>SpecOp Sangheili</label>
+    <combatPower>10</combatPower>
+    <apparelTags>
+      <li>SangheiliSpecArmor</li>
+      <li>SangheiliSpecHelmet</li>
+      <li>ZealotPauldron</li>
+    </apparelTags>
+    <weaponMoney>22000~82000</weaponMoney>
+    <weaponTags>
+      <li>Cov_HighTier</li>
+      <li>Cov_EnergySword</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>8~11</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>10~15</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+
+
+  <PawnKindDef ParentName="Cov_MEliteBase">
+    <defName>Cov_Major_Elite</defName>
+    <label>Major Sangheili</label>
+    <combatPower>10</combatPower>
+    <apparelRequired>
+      <li>MajorArmor</li>
+      <li>MajorHelm</li>
+      <li>Cov_MajorPauldron</li>
+    </apparelRequired>
+    <apparelTags>
+      <li>SangheiliMajorHelmet</li>
+      <li>SangheiliMajorArmor</li>
+      <li>MajorPauldron</li>
+    </apparelTags>
+    <weaponMoney>2000~10000</weaponMoney>
+    <weaponTags>
+      <li>Cov_HighTier</li>
+      <li>Cov_ELowTier</li>
+      <li>Cov_EnergySword</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~8</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>7~8</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Cov_MEliteBase">
+    <defName>Cov_Ultra_Elite</defName>
+    <label>Ultra Sangheili</label>
+    <combatPower>10</combatPower>
+    <apparelTags>
+      <li>SangheiliUltraArmor</li>
+      <li>SangheiliUltraHelmet</li>
+      <li>UltraPauldron</li>
+    </apparelTags>
+    <weaponMoney>41000~8000</weaponMoney>
+    <weaponTags>
+      <li>Cov_HighTier</li>
+      <li>Cov_EnergySword</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>10~11</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>10~15</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Cov_MEliteBase">
+    <defName>Cov_Zealot_Elite</defName>
+    <label>Zealot Sangheili</label>
+    <combatPower>10</combatPower>
+    <apparelTags>
+      <li>SangheiliZealotArmor</li>
+      <li>SangheiliZealotHelmet</li>
+      <li>ZealotPauldron</li>
+    </apparelTags>
+    <weaponMoney>41000~8000</weaponMoney>
+    <weaponTags>
+      <li>Cov_HighTier</li>
+      <li>Cov_EnergySword</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>10~11</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>10~15</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Cov_MEliteBase">
+    <defName>Cov_General_Elite</defName>
+    <label>General Sangheili</label>
+    <combatPower>10</combatPower>
+    <apparelTags>
+      <li>SangheiliGeneralArmor</li>
+      <li>SangheiliGeneralHelmet</li>
+      <li>GeneralPauldron</li>
+    </apparelTags>
+    <weaponMoney>12000~8000</weaponMoney>
+    <weaponTags>
+      <li>Cov_FuelRodCannon</li>
+      <li>Cov_EnergySword</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>12~20</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>10~20</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+
+
+  <PawnKindDef ParentName="Cov_MEliteBase">
+    <defName>Cov_Leader_Elite</defName>
+    <label>Field Marshal Sangheili</label>
+    <trader>true</trader>
+    <apparelTags>
+      <li>SangheiliFMHelmet</li>
+      <li>SangheiliZealotArmor</li>
+      <li>FieldMarshalPauldron</li>
+    </apparelTags>
+    <weaponMoney>19000~90000</weaponMoney>
+    <weaponTags>
+      <li>Cov_FuelRodCannon</li>
+      <li>Cov_EnergySword</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>16~20</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>18~20</range>
+      </li>
+      <li>
+        <skill>Social</skill>
+        <range>15~20</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Cov_MEliteBase">
+    <defName>Cov_Trade_Elite</defName>
+    <label>Trader Sangheili</label>
+    <trader>true</trader>
+    <apparelRequired>
+      <li>MajorArmor</li>
+      <li>MajorHelm</li>
+      <li>Cov_MajorPauldron</li>
+    </apparelRequired>
+    <apparelTags>
+      <li>SangheiliMajorHelmet</li>
+      <li>SangheiliMajorArmor</li>
+      <li>MajorPauldron</li>
+    </apparelTags>
+    <weaponMoney>1000~10000</weaponMoney>
+    <weaponTags>
+      <li>Cov_HighTier</li>
+      <li>Cov_ELowTier</li>
+      <li>Cov_EnergySword</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~8</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>7~8</range>
+      </li>
+      <li>
+        <skill>Social</skill>
+        <range>3~8</range>
+      </li>
+    </skills>
+  </PawnKindDef>
+
+<!-- Low Tier Grunt -->
+
+  <PawnKindDef ParentName="Cov_MGruntBase">
+    <defName>Cov_Minor_Grunt</defName>
+    <label>Minor Unggoy</label>
+    <combatPower>50</combatPower>
+    <apparelTags>
+      <li>UnggoyMinorArmor</li>
+      <li>UnggoyMask</li>
+    </apparelTags>
+    <weaponMoney>1000~10000</weaponMoney>
+    <weaponTags>
+      <li>Cov_PlasmaPistol</li>
+      <li>Cov_GruntWep</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~8</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>7~8</range>
+      </li>
+      <li>
+        <skill>Social</skill>
+        <range>3~8</range>
+      </li>
+    </skills>
+   <specificApparelRequirements>
+      <li>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(255,109,49,255)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <apparelLayer>Middle</apparelLayer>
+      </li>
+    </specificApparelRequirements>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Cov_MGruntBase">
+    <defName>Cov_Major_Grunt</defName>
+    <label>Major Unggoy</label>
+    <combatPower>40</combatPower>
+    <apparelTags>
+      <li>UnggoyMinorArmor</li>
+      <li>UnggoyMask</li>
+    </apparelTags>
+    <weaponMoney>1000~8000</weaponMoney>
+    <weaponTags>
+      <li>Cov_HighGruntWep</li>
+      <li>Cov_GruntWep</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>3~6</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>0~3</range>
+      </li>
+      <li>
+        <skill>Social</skill>
+        <range>5~9</range>
+      </li>
+    </skills>
+   <specificApparelRequirements>
+      <li>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(222,49,78,255)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <apparelLayer>Middle</apparelLayer>
+      </li>
+    </specificApparelRequirements>
+  </PawnKindDef>
+
+<!-- Low Tier Brute -->
+
+  <PawnKindDef ParentName="Cov_MBruteBase">
+    <defName>Cov_Minor_Brute</defName>
+    <label>Minor Jiralhanae</label>
+    <combatPower>30</combatPower>
+    <apparelTags>
+      <li>BruteMinorHelmet</li>
+      <li>BruteMinorArmor</li>
+    </apparelTags>
+    <weaponMoney>1000~9000</weaponMoney>
+    <weaponTags>
+      <li>Cov_BruteWep</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~8</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>7~11</range>
+      </li>
+      <li>
+        <skill>Social</skill>
+        <range>3~5</range>
+      </li>
+    </skills>
+   <specificApparelRequirements>
+      <li>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(6,130,147,255)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <apparelLayer>Middle</apparelLayer>
+      </li>
+      <li>
+        <bodyPartGroup>FullHead</bodyPartGroup>
+        <apparelLayer>Overhead</apparelLayer>
+      </li>
+    </specificApparelRequirements>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Cov_MBruteBase">
+    <defName>Cov_Major_Brute</defName>
+    <label>Major Jiralhanae</label>
+    <combatPower>10</combatPower>
+    <apparelTags>
+      <li>BruteMinorHelmet</li>
+      <li>BruteMinorArmor</li>
+    </apparelTags>
+    <weaponMoney>1000~50000</weaponMoney>
+    <weaponTags>
+      <li>GavHammer</li>
+      <li>Cov_BruteWep</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~8</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>7~11</range>
+      </li>
+      <li>
+        <skill>Social</skill>
+        <range>3~5</range>
+      </li>
+    </skills>
+   <specificApparelRequirements>
+      <li>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(40,95,172,255)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <apparelLayer>Middle</apparelLayer>
+      </li>
+      <li>
+        <bodyPartGroup>FullHead</bodyPartGroup>
+        <apparelLayer>Overhead</apparelLayer>
+      </li>
+    </specificApparelRequirements>
+  </PawnKindDef>
+
+<!-- Low Tier Kigyar -->
+
+  <PawnKindDef ParentName="Cov_MJackBase">
+    <defName>Cov_Minor_Jackal</defName>
+    <label>Minor Jackal</label>
+    <combatPower>50</combatPower>
+    <apparelTags>
+      <li>JackalArmor</li>
+      <li>CovPDG</li>
+    </apparelTags>
+    <weaponMoney>1000~10000</weaponMoney>
+    <weaponTags>
+      <li>Cov_GruntWep</li>
+      <li>Cov_Carbine</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~5</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>3~9</range>
+      </li>
+      <li>
+        <skill>Social</skill>
+        <range>1~3</range>
+      </li>
+    </skills>
+   <specificApparelRequirements>
+      <li>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(132,90,188,255)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <apparelLayer>Middle</apparelLayer>
+      </li>
+    </specificApparelRequirements>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Cov_RangeJackBase">
+    <defName>Cov_Ranger_Jackal</defName>
+    <label>Minor Jackal</label>
+    <combatPower>50</combatPower>
+    <apparelTags>
+      <li>JackalArmor</li>
+      <li>JackalHelmet</li>
+    </apparelTags>
+    <weaponMoney>1000~10000</weaponMoney>
+    <weaponTags>
+      <li>Cov_Sniper</li>
+      <li>Cov_NeedleRifle</li>
+      <li>Cov_Carbine</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>5~10</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>1~4</range>
+      </li>
+      <li>
+        <skill>Social</skill>
+        <range>1~4</range>
+      </li>
+    </skills>
+   <specificApparelRequirements>
+      <li>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(132,90,188,255)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <apparelLayer>Middle</apparelLayer>
+      </li>
+    </specificApparelRequirements>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Cov_MSkirmBase">
+    <defName>Cov_Minor_Skirm</defName>
+    <label>Minor Skirm</label>
+    <combatPower>50</combatPower>
+    <apparelTags>
+      <li>ArmorKigYar</li>
+      <li>KigYarHelmet</li>
+      <li>Cov_KigPauldron</li>
+      <li>CovPDG</li>
+    </apparelTags>
+    <weaponMoney>1000~10000</weaponMoney>
+    <weaponTags>
+      <li>Cov_GruntWep</li>
+      <li>Cov_PlasmaPistol</li>
+      <li>Cov_PlasmaGrenades</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>3~6</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>3~9</range>
+      </li>
+      <li>
+        <skill>Social</skill>
+        <range>1~3</range>
+      </li>
+    </skills>
+   <specificApparelRequirements>
+      <li>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(129,130,133,255)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <apparelLayer>Middle</apparelLayer>
+        <bodyPartGroup>FullHead</bodyPartGroup>
+        <apparelLayer>Overhead</apparelLayer>
+      </li>
+    </specificApparelRequirements>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Cov_MSkirmBase">
+    <defName>Cov_Melee_Skirm</defName>
+    <label>Melee Skirm</label>
+    <combatPower>50</combatPower>
+    <apparelTags>
+      <li>ArmorKigYar</li>
+      <li>KigYarHelmet</li>
+      <li>Cov_KigPauldron</li>
+      <li>CovPDG</li>
+    </apparelTags>
+    <weaponMoney>6500~10000</weaponMoney>
+    <weaponTags>
+      <li>EnergyDagger</li>
+    </weaponTags>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>1~3</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>3~14</range>
+      </li>
+      <li>
+        <skill>Social</skill>
+        <range>1~3</range>
+      </li>
+    </skills>
+   <specificApparelRequirements>
+      <li>
+        <colorGenerator Class="ColorGenerator_Options">
+          <options>
+            <li>
+              <only>(122,126,112,255)</only>
+            </li>
+          </options>
+        </colorGenerator>
+      </li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <apparelLayer>Middle</apparelLayer>
+      </li>
+      <li>
+        <bodyPartGroup>FullHead</bodyPartGroup>
+        <apparelLayer>Overhead</apparelLayer>
+        <color>(122,126,112,255)</color>
+      </li>
+    </specificApparelRequirements>
+  </PawnKindDef>
+
+</Defs>
